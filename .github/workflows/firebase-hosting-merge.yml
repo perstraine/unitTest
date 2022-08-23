@@ -5,12 +5,17 @@ name: Deploy to Firebase Hosting on merge
 'on':
   push:
     branches:
+<<<<<<< HEAD
       - Simon
+=======
+      - main
+>>>>>>> e1071f448041be5e7a95e97affaf54e30741629e
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+<<<<<<< HEAD
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -18,3 +23,12 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIR_3F72A }}'
           channelId: live
           projectId: fir-3f72a
+=======
+      - run: npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_BE1AE }}'
+          channelId: live
+          projectId: test-be1ae
+>>>>>>> e1071f448041be5e7a95e97affaf54e30741629e
