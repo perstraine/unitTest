@@ -1,14 +1,6 @@
 {
-  "hosting": {
-<<<<<<< HEAD
-    "public": "y",
-=======
-    "public": "public",
->>>>>>> e1071f448041be5e7a95e97affaf54e30741629e
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+	"hosting": {
+		"public": "y",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
 }
